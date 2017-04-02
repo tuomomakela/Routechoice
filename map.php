@@ -36,7 +36,14 @@
 <?php
 
 	// create image
-	$map = New Course1();
+	if (isset($_GET['type']) && $_GET['type'] == 2)
+	{
+		$map = New Course2();
+	}
+	else
+	{
+		$map = New Course1();
+	}
 	
 	// get image
 	$image = $map->getMap();

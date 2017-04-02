@@ -14,7 +14,14 @@ function routeLength($point1, $point2)
 function angle($x1, $y1, $x2, $y2)
 {
 	// eka on alhaalla
-	if ($y1 > $y2)
+	if ($y1 == $y2)
+	{
+		// eka on vasemmalla ensin
+		$angle = ($x1 < $x2)
+			? 1 / 2 * pi()
+			: 3 / 2 * pi();
+	}
+	else if ($y1 > $y2)
 	{
 		// eka on vasemmalla ensin
 		$angle = ($x1 < $x2)
